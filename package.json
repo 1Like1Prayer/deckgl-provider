@@ -1,0 +1,40 @@
+{
+    "name": "@ofek324bt/deckgl-provider",
+    "private": false,
+    "version": "0.0.1",
+    "type": "module",
+    "files": [
+        "dist"
+    ],
+    "main": "./dist/my-lib",
+    "module": "./dist/my-lib.js",
+    "typings": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": {
+                "types": "./dist/index.d.ts",
+                "default": "./dist/my-lib.js"
+            },
+            "require": "./dist/my-lib.umd.cjs"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@types/node": "^20.3.3",
+        "typescript": "^5.0.2",
+        "vite": "^4.3.9"
+    },
+    "dependencies": {
+        "@deck.gl/core": "^8.9.21",
+        "@deck.gl/layers": "^8.9.21",
+        "@nebula.gl/layers": "^1.0.4",
+        "@nebula.gl/overlays": "^1.0.4",
+        "deck.gl": "^8.9.19",
+        "prettier": "^3.0.0",
+        "vite-plugin-dts": "^3.0.3"
+    }
+}
